@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom New Tab</title>
+    <meta name="description" content="Custom New Tab - open a custom URL as a new tab" />
+    <meta name="author" content="Lily Oliveira" />
+
+    <meta property="og:title" content="Custom New Tab" />
+    <meta property="og:description" content="Custom New Tab - open a custom URL as a new tab" />
+    <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/newtab.css">
+</head>
+
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading your custom page...</p>
+  </div>
+
+  <div id="no-url" class="hidden">
+    <div class="container">
+      <h1>Welcome to Custom New Tab</h1>
+      <p class="description">You haven't set a custom URL yet.</p>
+
+      <div class="instructions">
+        <h2>How to set up your custom new tab:</h2>
+        <ol>
+          <li>Click the extension icon <span class="icon"><img src="icons/icon48.png" alt="Extension Icon" width="20"
+                height="20" style="vertical-align:middle;"></span> in your browser toolbar</li>
+          <li>Enter your desired URL (web address or local file)</li>
+          <li>Click Save</li>
+        </ol>
+
+        <div class="examples">
+          <h3>Examples:</h3>
+          <ul>
+            <li><strong>Web URL:</strong> https://example.com</li>
+            <li><strong>Local file (Windows):</strong> file:///C:/path/to/file.html</li>
+            <li><strong>Local file (WSL):</strong> file://///wsl.localhost/Ubuntu/path/to/file.html</li>
+            <li><strong>Local file (Mac):</strong> file:///Users/username/path/to/file.html</li>
+          </ul>
+        </div>
+
+        <div class="permission-notice">
+          <h3>Important!</h3>
+          <p>To access local files, you must enable "Allow access to file URLs" for this extension:</p>
+          <ol>
+            <li>Go to your browser's extensions page</li>
+            <li>Find this extension and click "Details"</li>
+            <li>Enable "Allow access to file URLs"</li>
+            <li>Restart your browser</li>
+          </ol>
+        </div>
+
+        <div class="footer">
+          <a href="https://ko-fi.com/lily_neinhorn" target="_blank">Made with ♥</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/newtab.js"></script>
+</body>
+
+</html>

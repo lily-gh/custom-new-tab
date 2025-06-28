@@ -1,0 +1,13 @@
+{
+  "name": "custom-new-tab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "zip -r custom-new-tab-edge.zip . -x 'firefox/*' -x '.git/*' -x '.gitignore' -x 'package.json' -x 'node_modules/*' -x 'package-lock.json'"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom New Tab</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Custom New Tab</h1>
+      <div class="line"></div>
+    </div>
+    
+    <div class="main">
+      <label for="url-input">URL for New Tab:</label>
+      <div class="input-container">
+        <input 
+          type="text" 
+          id="url-input" 
+          placeholder="Enter URL (e.g., https://example.com or file:///path/to/file.html)"
+        >
+        <div class="tooltip">
+          <span class="tooltip-icon">?</span>
+          <span class="tooltip-text">You can use web URLs like https://example.com or local file paths like file:///Users/name/path/index.html</span>
+        </div>
+      </div>
+      
+      <div id="message" class="message"></div>
+      
+      <div class="buttons">
+        <button id="save-btn">Save</button>
+        <button id="reset-btn" class="secondary">Reset</button>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Changes will apply to new tab pages.</p>
+    </div>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html>
