@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "description": "Set any URL as your new tab page",
   "permissions": [
-    "storage",
-    "fileSystem"
+    "storage"
   ],
   "host_permissions": [
     "file:///*"
