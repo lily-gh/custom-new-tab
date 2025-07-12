@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const noUrlElement = document.getElementById('no-url');
 
   // Get the custom URL from storage
-  chrome.storage.sync.get(['newTabUrl'], function (result) {
-    if (result.newTabUrl) {
+  browser.storage.local.get(['newTabUrl'], function (result) {
+    if (result && result.newTabUrl) {
       // If URL is set, redirect to that URL
       window.location.href = result.newTabUrl;
     } else {

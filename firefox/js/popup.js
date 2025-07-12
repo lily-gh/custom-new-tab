@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const message = document.getElementById('message');
   
   // Load saved URL when popup opens
-  chrome.storage.sync.get(['newTabUrl'], function(result) {
+  browser.storage.local.get(['newTabUrl'], function(result) {
     if (result.newTabUrl) {
       urlInput.value = result.newTabUrl;
     }
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Save to storage
-    chrome.storage.sync.set({newTabUrl: url}, function() {
+    browser.storage.local.set({newTabUrl: url}, function() {
       showMessage('URL saved successfully!', 'success');
     });
   });
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Reset URL
   resetBtn.addEventListener('click', function() {
     urlInput.value = '';
-    chrome.storage.sync.remove('newTabUrl', function() {
+    browser.storage.local.remove('newTabUrl', function() {
       showMessage('Custom URL removed', 'success');
     });
   });
@@ -54,13 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3000);
   }
   
-  // Helper function to validate URLs
   function isValidUrl(string) {
-    // Allow file:// URLs and web URLs
-    if (string.startsWith('file:///')) {
-      return true;
-    }
-    
     try {
       new URL(string);
       return true;
